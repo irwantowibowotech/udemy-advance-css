@@ -1,0 +1,17 @@
+@import "../abstracts/variables";
+
+*, *::before, *::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit; /*artinya setiap elemen yang kita buat box-sizing nya akan mengikuti elemen di atasnya (body atuau html (root))*/
+}
+
+/*membuat constan ukuran rem, ketika kita buat font size di root 10px maka 1rem = 10px*/
+html {
+	/*font-size: 10px;*/
+	font-size: 62.5%; /*didapat dari pembagian 10/16 = 0.625 (dijadikan % menjadi 62.5%), 10 adalah pixel yg kita definisikan...16 adalah default pixel dari browser*/
+}
+
+body {
+	box-sizing: border-box;
+}
