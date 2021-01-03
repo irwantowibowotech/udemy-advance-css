@@ -1,12 +1,7 @@
-### About Section
+### Features Section
 
 #### Sesi pertama
-kita buat sebuat text judul yang menggunakan efek linear gradient pada textnya, selain itu kita juga membuat efek ketika di-hover akan membuat text judul menjadi miring (dengan properti skewX dan skewY) serta memperbesar text (dengan properti scale).
-Kemudian kita buat grid untuk menampung section paragraf dan image nantinya.
-
+Kita memuat icon yang kita download (saya memakai icon dari linea.io). Kita juga lakukan styling section features dengan memanfaatkan grid custom yang kita buat sebelumnya dan kita styling menjadi card. Selain itu kita beri efek transform ketika section tersebut di-hover.
 
 #### Sesi kedua
-Pada section paragraf kita isi dengan beberapa pragraf serta button, sekalian kita styling section tersebut.
-
-#### Sesi ketiga
-Pada tahap ini kita membuat image yang menumpuk dengan memanfaatkan positioning, kemudian kita juga memberikan efek ketika foto tersebut dihover dan foto yang tidak ter-select ketika dihover juga kita berikan efek (translate sumbu Y).  
+Kita beri section induk dengan memberikan background image, dan kita terapkan transform section-na dengan menerapkan properti "skew" agar section menjadi miring
