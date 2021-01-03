@@ -1,0 +1,15 @@
+/*
+Penggunaan Properti Clear (pada kesempatan ini kita gunakan micro clearfix (memanfaatkan pseudo element))
+
+- clear digunakan untuk membersihkan float yang kita buat
+- clear: left kita gunakan untuk membersihkan float: left, begitu juga sebaliknya
+- clear: both kita gunakan untuk membersihkan float: left maupun right.
+*/
+
+@mixin clearfix {
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
