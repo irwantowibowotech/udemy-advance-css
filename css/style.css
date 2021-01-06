@@ -149,6 +149,11 @@ Penggunaan Properti Clear (pada kesempatan ini kita gunakan micro clearfix (mema
   padding: 25rem 0 15rem 0;
   margin-top: -10rem; }
 
+.section-stories {
+  position: relative;
+  /*ini kita tambahkan karen untuk class bg-video memiliki position absolute*/
+  padding: 15rem 0; }
+
 .btn:link, .btn:visited {
   font-size: 1.6rem;
   text-transform: uppercase;
@@ -209,6 +214,7 @@ Penggunaan Properti Clear (pada kesempatan ini kita gunakan micro clearfix (mema
   transition: all .2s; }
 
 .btn-text:hover {
+  cursor: pointer;
   background-color: #55c57a;
   color: #fff;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
@@ -360,6 +366,70 @@ Penggunaan Properti Clear (pada kesempatan ini kita gunakan micro clearfix (mema
   .card__price-value {
     font-size: 6rem;
     font-weight: 100; }
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  padding: 6rem;
+  padding-left: 9rem;
+  font-size: 1.6rem;
+  transform: skewX(-12deg); }
+  .story__shape {
+    width: 15rem;
+    height: 15rem;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) skewX(12deg);
+    /*menggeser objek ke kiri sebanyak -30px dan mengembalikan kemiringan yang dibuat oleh parent menjadi seperti semula*/
+    position: relative; }
+  .story__img {
+    height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    transition: all .5s; }
+  .story__text {
+    transform: skewX(12deg);
+    /*mengembalikan kemiringan yang dibuat oleh parent menjadi seperti semula*/ }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden; }
+  .story:hover .story__caption {
+    /*kita seleksi class story__caption saat class story di-hover*/
+    opacity: 1;
+    transform: translate(-50%, -50%); }
+  .story:hover .story__img {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(3px) brightness(80%); }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 15%;
+  z-index: -1;
+  /*berada di bagian paling belakang dari semua elemen*/
+  overflow: hidden; }
+  .bg-video__content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ukuran konten yang diganti untuk mempertahankan rasio aspeknya saat mengisi seluruh kotak konten elemen. Objek akan dipotong agar pas*/ }
 
 /***********HEADER***************/
 /***********HEADER***************/
